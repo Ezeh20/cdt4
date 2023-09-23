@@ -1,0 +1,67 @@
+.header {
+    height: max-content;
+
+    .nav {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0 .5rem;
+
+            @media screen and (min-width:768px) {
+                padding: 40px 0;
+            }
+
+            .logo {
+                width: 200px;
+                height: 25px;
+
+                @media screen and (min-width:768px) {
+                    width: 210px;
+                }
+
+            }
+
+            .help {
+                display: none;
+
+                @media screen and (min-width:768px) {
+                    display: initial;
+                }
+            }
+
+            .icon {
+                width: 30px;
+                height: 30px;
+                color: #008CBA;
+
+                @media screen and (min-width:768px) {
+                    display: none;
+                }
+            }
+        }
+
+        .bottom {
+            height: 0;
+            overflow: hidden;
+            transition: all 300ms ease-in-out;
+
+
+            @media screen and (min-width:768px) {
+                height: max-content;
+                overflow: initial;
+            }
+        }
+
+        .bottomAlt {
+            height: max-content;
+            overflow: initial;
+            transition: all 2s ease-in-out;
+        }
+    }
+}
