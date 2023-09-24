@@ -16,7 +16,7 @@ import input from './input.svg'
 import uk from './uk.svg'
 import norway from './norway.svg'
 import france from './france.svg'
-import guest from './guest.svg'
+import guest from './guest.png'
 
 export {
     arr_down,

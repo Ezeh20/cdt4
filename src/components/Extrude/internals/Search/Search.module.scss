@@ -16,11 +16,12 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: .5rem .5rem .5rem 1.5rem;
+        padding: .5rem 1.5rem;
         border: 2px solid transparent;
         border-radius: 8px;
 
         @media screen and (min-width: 810px) {
+            padding: .5rem .5rem .5rem 1.5rem;
             flex-direction: row;
         }
 
@@ -32,6 +33,7 @@
             @media screen and (min-width: 810px) {
                 width: 60%;
             }
+
             @media screen and (min-width: 1200px) {
                 width: 80%;
             }

@@ -1,15 +1,91 @@
 .booking {
     margin-top: 20rem;
+    margin-bottom: 5rem;
 
     @media screen and (min-width: 810px) {
         margin-top: 13rem;
     }
 
     .container {
-        max-width: 793px;
+        max-width: 781px;
 
-        @media screen and (min-width: 793px) {
+        @media screen and (min-width: 781px) {
             margin-inline: auto;
+        }
+
+        .topSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #FFC64F;
+            border-radius: 4px;
+            padding: .4rem;
+
+            @media screen and (min-width: 800px) {
+                flex-direction: row;
+                gap: 30px;
+                padding: 0 .4rem;
+            }
+
+            .left {
+                display: flex;
+                align-items: center;
+                width: 45%;
+                gap: 6px;
+            }
+
+            .right {
+                @extend .left;
+                // background: #000;
+                flex-wrap: nowrap;
+
+                @media screen and (min-width: 800px) {
+                    width: 55%;
+                    justify-content: space-between;
+                }
+
+                .img {
+                    margin-top: 8px;
+                }
+            }
+
+            @media screen and (max-width:450px) {
+                .left {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .bottomSection {
+            width: 100%;
+            margin-top: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+
+            .places {
+                width: 100%;
+                display: grid;
+                row-gap: 4px;
+                column-gap: 8px;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                .from {
+                    font-size: 13px;
+                    color: #979390;
+                    text-align: end;
+                    font-weight: 600;
+                }
+
+                .place {
+                    .img {
+                        width: 100%;
+                    }
+                }
+            }
+
         }
     }
 }
