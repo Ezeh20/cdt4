@@ -1,12 +1,13 @@
-import Navigation from "./components/Navigation"
+import Navigation from "./components/Navigation";
+import Hero from "./sections/Hero";
 
 const App = () => {
   return (
     <>
       <Navigation />
-      <h1>Ade</h1>
+      <Hero />
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
