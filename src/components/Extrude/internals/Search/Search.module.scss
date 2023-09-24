@@ -1,0 +1,64 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @media screen and (min-width: 810px) {
+        flex-direction: row;
+    }
+
+    .inputContainer {
+        position: relative;
+        background-color: #F2F4F8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: .5rem .5rem .5rem 1.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+
+        @media screen and (min-width: 810px) {
+            flex-direction: row;
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            @media screen and (min-width: 810px) {
+                width: 60%;
+            }
+            @media screen and (min-width: 1200px) {
+                width: 80%;
+            }
+
+            .input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                width: 100%;
+                font-size: 18px;
+                padding: 1rem;
+            }
+        }
+
+        .btn {
+            padding: 1rem;
+            font-size: 18px;
+            width: 100%;
+
+            @media screen and (min-width: 810px) {
+                width: 40%;
+                margin-left: 1rem;
+            }
+
+            @media screen and (min-width: 1200px) {
+                width: 20%;
+            }
+        }
+    }
+}

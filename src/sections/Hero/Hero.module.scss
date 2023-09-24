@@ -17,17 +17,21 @@
         justify-content: center;
 
         .container {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
             position: relative;
             margin-inline: 1.5rem;
             max-width: 1144px;
             color: #FFFFFF;
 
-            .subtext{
+            .subtext {
                 margin-top: .5rem;
             }
+
             @media screen and (min-width: 425px) {
                 font-size: 20px;
             }
+
             @media screen and (min-width:1160px) {
                 width: 100%;
                 margin-inline: auto;
@@ -36,10 +40,21 @@
                     font-size: 32px;
                 }
             }
-            .extrude{
+
+            .extrude {
                 position: absolute;
-                background: #000;
+                background: #FFFFFF;
+                color: #756F6C;
                 width: 100%;
+                top: 66px;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0px 15px 10px -6px #1018281A;
+
+                @media screen and (min-width: 810px) {
+                    margin-top: 40px;
+                    padding: 3rem;
+                }
             }
         }
     }

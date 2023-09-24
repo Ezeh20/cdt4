@@ -1,0 +1,19 @@
+.select {
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width:810px) {
+        width: 40%;
+    }
+
+    .input {
+       border: 2px solid #F2F4F8;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        font-size: 18px;
+        padding: 1.5rem 24px;
+        border-radius: 8px;
+        width: 100%;
+    }
+}

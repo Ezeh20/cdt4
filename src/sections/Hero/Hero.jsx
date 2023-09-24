@@ -1,6 +1,7 @@
 import styles from "./Hero.module.scss";
 import { hero_bg } from "../../../public/assets";
 import Container from "../../components/Container";
+import Extrude from "../../components/Extrude";
 
 export const Hero = () => {
   const greeting = "HELLO";
@@ -14,7 +15,7 @@ export const Hero = () => {
             <p className={styles.subtext}>{subtext}</p>
           </div>
           <div className={styles.extrude}>
-            <h1>Ade</h1>
+            <Extrude />
           </div>
         </Container>
       </div>
