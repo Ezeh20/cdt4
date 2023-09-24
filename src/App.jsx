@@ -4,6 +4,7 @@ const App = () => {
   return (
     <>
       <Navigation />
+      <h1>Ade</h1>
     </>
   )
 }
