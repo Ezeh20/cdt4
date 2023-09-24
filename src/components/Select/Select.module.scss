@@ -6,14 +6,69 @@
         width: 40%;
     }
 
-    .input {
-       border: 2px solid #F2F4F8;
-        outline: none;
-        background-color: transparent;
+    .inputContainer {
+        position: relative;
+        align-items: center;
+        display: flex;
+
+
+        .input {
+            border: 2px solid #F2F4F8;
+            outline: none;
+            background-color: transparent;
+            width: 100%;
+            font-size: 18px;
+            padding: 1.5rem 24px;
+            border-radius: 8px;
+            width: 100%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            font-size: 1.6rem;
+            right: 24px;
+            transition: all 300ms ease-in-out;
+        }
+
+        .iconAlt {
+            transform: rotate(180deg);
+            transition: all 300ms ease-in-out;
+        }
+    }
+
+    .options {
+        position: absolute;
+        height: 200px;
+        background-color: #fff;
         width: 100%;
+        overflow-y: scroll;
         font-size: 18px;
-        padding: 1.5rem 24px;
+        color: #979390;
         border-radius: 8px;
-        width: 100%;
+
+        .state {
+            padding: 10px 24px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #008CBA;
+                color: #fff;
+            }
+        }
+
+    }
+
+    .options::-webkit-scrollbar {
+        display: inline-flex;
+        width: .3vw;
+    }
+
+    .options::-webkit-scrollbar-thumb {
+        background: linear-gradient(transparent, #008CBA);
+        border-radius: 20px;
     }
 }
