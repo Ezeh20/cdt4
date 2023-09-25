@@ -10,6 +10,18 @@
         width: 100%;
     }
 
+    .icon2 {
+        color: #fff;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: end;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .modal {
         background-color: #fff;
         padding: 2rem;

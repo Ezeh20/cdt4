@@ -62,5 +62,30 @@
                 width: 20%;
             }
         }
+
+        .btnAlt {
+            opacity: .5;
+
+            &:hover {
+                cursor: not-allowed;
+                transform: scale(1);
+            }
+        }
+    }
+
+    .modal {
+        background: transparent;
+
+        .icon2 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: end;
+            width: 100%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }

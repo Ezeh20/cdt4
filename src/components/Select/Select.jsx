@@ -19,8 +19,8 @@ export const Select = ({ options, placeholder }) => {
   };
 
   const onClose = () => {
-    setIsActive((pre) => !pre);
     setValue("");
+    setIsActive((pre) => !pre);
   };
   return (
     <div className={styles.select}>

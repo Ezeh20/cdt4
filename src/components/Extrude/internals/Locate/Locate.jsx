@@ -3,6 +3,7 @@ import Button from "../../../Button";
 import axios from "axios";
 import { useContext, useState } from "react";
 import Modal from "../../../Modal";
+import { AiOutlineClose } from "react-icons/ai";
 import { ModalContext } from "../../../../context/ModalContext";
 import { constants } from "./constants";
 
@@ -72,10 +73,18 @@ export const Locate = () => {
     }
   };
 
+  const onClose = () => {
+    setIsActive(false);
+    setData([]);
+  };
+
   return (
     <div className={styles.locate}>
       <Button label="Locate Me" onClick={getLocation} className={styles.btn} />
       <Modal>
+        {!loading ? (
+          <AiOutlineClose onClick={onClose} className={styles.icon2} />
+        ) : undefined}
         {loading ? (
           <p style={{ color: "#fff" }}>Loading...</p>
         ) : (
