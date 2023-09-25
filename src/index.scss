@@ -15,3 +15,44 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #FBFBFB;
 }
+
+.modal_modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
+    background: red;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    background: #000000e5;
+}
+
+.modal_modal::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
+.hideModal_hideModal {
+    display: none;
+}
+
+.animate_modal_modal {
+    animation: animate-modal 300ms linear forwards;
+}
+
+@keyframes animate-modal {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
