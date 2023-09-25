@@ -1,11 +1,27 @@
 import PropTypes from "prop-types";
 import styles from "./Select.module.scss";
 import { IoIosArrowDown } from "react-icons/io";
-import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { useContext, useState } from "react";
+import { ModalContext } from "../../context/ModalContext";
+import Modal from "../Modal";
+import ComingSoon from "../ComingSoon";
 
 export const Select = ({ options, placeholder }) => {
+  const { setIsActive } = useContext(ModalContext);
   const [active, setActive] = useState(false);
   const [value, setValue] = useState("");
+
+  const onClick = (itm) => {
+    setValue(itm);
+    setActive((pre) => !pre);
+    setIsActive((pre) => !pre);
+  };
+
+  const onClose = () => {
+    setIsActive((pre) => !pre);
+    setValue("");
+  };
   return (
     <div className={styles.select}>
       <div
@@ -31,10 +47,7 @@ export const Select = ({ options, placeholder }) => {
             return (
               <p
                 key={itm}
-                onClick={() => {
-                  setValue(itm);
-                  setActive((pre) => !pre);
-                }}
+                onClick={() => onClick(itm)}
                 className={styles.state}
               >
                 {itm}
@@ -43,6 +56,10 @@ export const Select = ({ options, placeholder }) => {
           })}
         </div>
       ) : undefined}
+      <Modal className={styles.modal}>
+        <AiOutlineClose onClick={onClose} className={styles.icon2} />
+        <ComingSoon />
+      </Modal>
     </div>
   );
 };

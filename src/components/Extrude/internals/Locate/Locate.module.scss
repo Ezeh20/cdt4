@@ -12,5 +12,23 @@
 
     .modal {
         background-color: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+
+        .res {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .result {
+                @extend .res;
+                gap: .5rem;
+                flex-direction: row;
+
+                .span {
+                    color: #00759B;
+                }
+            }
+        }
     }
 }

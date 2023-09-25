@@ -5,7 +5,7 @@ export const ModalContext = createContext();
 
 export const ModalContextProvider = ({ children }) => {
   const [isActive, setIsActive] = useState(false);
-  
+
   const value = { isActive, setIsActive };
 
   return (

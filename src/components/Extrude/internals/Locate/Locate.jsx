@@ -4,7 +4,9 @@ import axios from "axios";
 import { useContext, useState } from "react";
 import Modal from "../../../Modal";
 import { ModalContext } from "../../../../context/ModalContext";
+import { constants } from "./constants";
 
+const { unavailable, unknown, denied, timeout, not } = constants;
 export const Locate = () => {
   const { setIsActive } = useContext(ModalContext);
   const [data, setData] = useState([]);
@@ -25,26 +27,26 @@ export const Locate = () => {
         function (error) {
           switch (error.code) {
             case error.PERMISSION_DENIED:
-              alert(`User denied the request for geolocation and is blocked. To reset the permission go to the permission settings > location and unblock the site
-                            or just use another browser`);
+              alert(denied);
               break;
             case error.POSITION_UNAVAILABLE:
-              alert("Location information is unavailable.");
+              alert(unavailable);
               break;
             case error.TIMEOUT:
-              alert("The request to get user location timed out.");
+              alert(timeout);
               break;
             case error.UNKNOWN_ERROR:
-              alert("An unknown error occurred.");
+              alert(unknown);
               break;
           }
         }
       );
     } else {
-      alert("Geolocation is not supported by this browser.");
+      alert(not);
     }
   };
 
+  //use the user's latitude and longitude to fetch the location data
   const searchPostalCode = async (latitude, longitude) => {
     const base = "https://nominatim.openstreetmap.org/reverse";
     const params = new URLSearchParams({
@@ -70,29 +72,37 @@ export const Locate = () => {
     }
   };
 
-
   return (
     <div className={styles.locate}>
       <Button label="Locate Me" onClick={getLocation} className={styles.btn} />
       <Modal>
         {loading ? (
-          "Loading..."
+          <p style={{ color: "#fff" }}>Loading...</p>
         ) : (
-          <div className={styles.Modal}>
+          <div className={styles.modal}>
             {data.length > 0 && (
               <div className={styles.entry}>
                 {data.map((itm, idx) => {
                   const { address } = itm;
                   return (
                     <div key={idx} className={styles.res}>
-                      <div className={styles.top}>
-                        <p>{address.postcode}</p>
-                        <p>{address.country}</p>
-                      </div>
-                      <div className={styles.bottom}>
-                        <p>{address.state}</p>
-                        <p>{address.city}</p>
-                      </div>
+                      <p className={styles.result}>
+                        <span className={styles.span}>Postcode:</span>
+                        {address.postcode}
+                      </p>
+                      <p className={styles.result}>
+                        <span className={styles.span}>Country:</span>
+                        {address.country}
+                      </p>
+
+                      <p className={styles.result}>
+                        <span className={styles.span}>State:</span>
+                        {address.state}
+                      </p>
+                      <p className={styles.result}>
+                        <span className={styles.span}>City:</span>
+                        {address.city}
+                      </p>
                     </div>
                   );
                 })}
