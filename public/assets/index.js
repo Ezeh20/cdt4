@@ -17,6 +17,15 @@ import uk from './uk.svg'
 import norway from './norway.svg'
 import france from './france.svg'
 import guest from './guest.png'
+import bd1 from './postcodes/bd1.png'
+import le8 from './postcodes/le8.png'
+import sa99 from './postcodes/sa99.png'
+import sl6 from './postcodes/sl6.png'
+import sw1 from './postcodes/sw1.png'
+import w1a from './postcodes/w1a.png'
+import wc2 from './postcodes/wc2.png'
+import wc2h from './postcodes/wc2h.png'
+import pin from './postcodes/pin.svg'
 
 export {
     arr_down,
@@ -37,5 +46,14 @@ export {
     uk,
     norway,
     france,
-    guest
+    guest,
+    bd1,
+    le8,
+    sa99,
+    sl6,
+    sw1,
+    w1a,
+    wc2,
+    wc2h,
+    pin
 }
