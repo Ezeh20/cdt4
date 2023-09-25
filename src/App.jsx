@@ -4,6 +4,7 @@ import Booking from "./sections/Booking";
 import Popular from "./sections/Popular";
 import Note from "./sections/Note";
 import Faq from "./sections/Faq";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Popular />
       <Note />
       <Faq />
+      <Footer />
     </>
   );
 };
