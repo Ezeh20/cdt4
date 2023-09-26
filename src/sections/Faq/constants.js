@@ -30,3 +30,9 @@ export const FAQ = [
         answer: "lorem ipsum dolor sit amet, consectetur adip id el aspect et non proident"
     },
 ]
+
+export const testIds ={
+    COMPONENT:"component_faq",
+    HEADING:"heading",
+    QUESTION_ANSWER:"question_ans",
+}

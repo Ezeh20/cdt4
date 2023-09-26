@@ -3,9 +3,10 @@ import { logo, help } from "../../../public/assets";
 import { AiOutlineMenuFold, AiOutlineClose } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { useState } from "react";
-import { constants } from "./constants";
+import { constants, testIds } from "./constants";
 import styles from "./Navigation.module.scss";
 const { dropDown, single } = constants;
+const { COMPONENT, LINKS, SUBLINKS } = testIds;
 
 export const Navigation = () => {
   const [toggle, setToggle] = useState(false);
@@ -23,7 +24,7 @@ export const Navigation = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header data-testid={COMPONENT} className={styles.header}>
       <Container>
         <nav className={styles.nav}>
           <div className={styles.top}>
@@ -37,6 +38,7 @@ export const Navigation = () => {
           </div>
           <Container className={styles.container}>
             <div
+              data-testid={LINKS}
               className={
                 toggle
                   ? `${styles.bottom} ${styles.bottomAlt}`
@@ -71,7 +73,7 @@ export const Navigation = () => {
                       >
                         {lists.map((itm) => {
                           return (
-                            <div key={itm}>
+                            <div data-testid={SUBLINKS} key={itm}>
                               <p>{itm}</p>
                             </div>
                           );

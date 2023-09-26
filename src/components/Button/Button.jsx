@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
 import styles from "./Button.module.scss";
 
-export const Button = ({ label, className, ...props }) => {
+export const Button = ({ label, className, dataTest, ...props }) => {
   return (
-    <button className={`${styles.button} ${className}`} {...props}>
+    <button
+      data-testid={dataTest}
+      className={`${styles.button} ${className}`}
+      {...props}
+    >
       {label}
     </button>
   );
@@ -12,9 +16,11 @@ export const Button = ({ label, className, ...props }) => {
 Button.propTypes = {
   label: PropTypes.string,
   className: PropTypes.string,
+  dataTest: PropTypes.string,
 };
 
 Button.defaultProps = {
   label: "Some label",
   className: "",
+  dataTest: "",
 };

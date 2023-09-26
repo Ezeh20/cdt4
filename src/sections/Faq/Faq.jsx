@@ -1,5 +1,5 @@
 import Container from "../../components/Container";
-import { FAQ } from "./constants";
+import { FAQ, testIds } from "./constants";
 import styles from "./Faq.module.scss";
 import { arr_right } from "../../../public/assets";
 import { useState } from "react";
@@ -13,10 +13,10 @@ export const Faq = () => {
   };
 
   return (
-    <section className={styles.faq}>
+    <section data-testid={testIds.COMPONENT} className={styles.faq}>
       <Container className={styles.container}>
-        <h3 className={styles.header}>Frequently Asked Questions</h3>
-        <div className={styles.qa}>
+        <h3 data-testid={testIds.HEADING} className={styles.header}>Frequently Asked Questions</h3>
+        <div data-testid={testIds.QUESTION_ANSWER} className={styles.qa}>
           {FAQ.map((itm, idx) => {
             const { id, question, answer } = itm;
             return (
@@ -30,7 +30,9 @@ export const Faq = () => {
                   <img
                     src={arr_right}
                     alt="arr"
-                    className={active === idx ? `${styles.img}` : `${styles.imgAlt}`}
+                    className={
+                      active === idx ? `${styles.img}` : `${styles.imgAlt}`
+                    }
                   />
                 </div>
                 <p

@@ -1,13 +1,14 @@
 import styles from "./Booking.module.scss";
 import Container from "../../components/Container";
-import { left, right, places } from "./constants";
+import { left, right, places, testIds } from "./constants";
 import { discover } from "../../../public/assets";
+
 
 export const Booking = () => {
   return (
-    <section className={styles.booking}>
+    <section data-testid={testIds.COMPONENT} className={styles.booking}>
       <Container className={styles.container}>
-        <div className={styles.topSection}>
+        <div data-testid={testIds.TOP} className={styles.topSection}>
           <div className={styles.left}>
             {left.map((itm, id) => {
               return <img key={id} src={itm} alt="id" />;
@@ -27,7 +28,7 @@ export const Booking = () => {
           </div>
         </div>
         <div className={styles.bottomSection}>
-          <div className={styles.places}>
+          <div data-testid={testIds.BOTTOM} className={styles.places}>
             {places.map((itm, id) => {
               return (
                 <div key={id} className={styles.place}>

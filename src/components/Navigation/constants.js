@@ -13,3 +13,10 @@ export const constants = {
     ],
     single: ['Nearest Postcode', 'Postcode Lottery']
 }
+
+export const testIds = {
+    COMPONENT: "component_nav",
+    LINKS: "links",
+    SUBLINKS: "sublinks",
+    ICON: "icon_test",
+}
