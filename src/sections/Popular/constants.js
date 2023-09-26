@@ -49,3 +49,10 @@ export const constant = [
         popularity: 'Very popular'
     },
 ]
+
+export const testIds ={
+    COMPONENT:"component_popular",
+    HEADER:"header_popular",
+    SUBHEADER:"subheader_popular",
+    CARDS:"cards_popular",
+}

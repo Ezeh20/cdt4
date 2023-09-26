@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { ModalContext } from "../../context/ModalContext";
 import Modal from "../Modal";
 import ComingSoon from "../ComingSoon";
+import { testIds } from "./constants";
 
 export const Select = ({ options, placeholder }) => {
   const { setIsActive } = useContext(ModalContext);
@@ -42,7 +43,7 @@ export const Select = ({ options, placeholder }) => {
         />
       </div>
       {active ? (
-        <div className={styles.options}>
+        <div data-testid={testIds.OPTIONS} className={styles.options}>
           {options.map((itm) => {
             return (
               <p

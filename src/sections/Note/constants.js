@@ -7,3 +7,9 @@ export const constant = [
     'Find the nearest Postcode to where you are right now.',
     'Read what other people have said about your Postcode, and leave your own comments for others to read.'
 ]
+
+export const testIds ={
+    COMPONENT:"component_note",
+    HEADER:"header_note",
+    NOTES:"notes_note",
+}
