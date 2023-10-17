@@ -1,8 +1,8 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Postcoder uses your location to get your current postcode
+![Screenshot (193)](https://github.com/Ezeh20/cdt4/assets/29344226/2ddba56b-7c32-4e84-a305-f232afc1b5b0)
 
-Currently, two official plugins are available:
+![Screenshot (192)](https://github.com/Ezeh20/cdt4/assets/29344226/c531ccc9-77a7-4ffd-96ae-27f3ceb86f35)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Screenshot (191)](https://github.com/Ezeh20/cdt4/assets/29344226/fd96b211-0bad-4bba-a763-0837b24f4568)
